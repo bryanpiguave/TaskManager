@@ -35,8 +35,35 @@
         
     </div>
     <div class="col-md-8">
-
-
+            <table class="table table-bordered">
+                <thead>
+                    <tr>  
+                    <th> Title </th>
+                    <th> Description </th>
+                    <th> Created at </th>
+                    <th> Actions </th>
+                    </tr>
+        </thead>
+        <tbody>
+            <?php 
+                $query = "SELECT * FROM task";
+                $result_taks=mysqli_query($conn,$query);
+                
+                while($row=mysqli_fetch_array($result_taks)){ ?>
+                    <tr> 
+                        <td><?php echo $row["title"] ?> </td>
+                        <td><?php echo $row["descrip"] ?> </td>   
+                        <td><?php echo $row["created_at"] ?> </td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $row['id'] ?>"class="btn btn-secondary" >
+                                <i class="fas fa-marker" src="edit.php"></i>
+                </a> 
+                <a href="delete_task.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
+                    <i class="fas fa-trash-alt" src="delete_task.php"></i>
+                </a>              
+                </tr>
+                <?php }            ?>
+        </tbody>
     </div>
 </div>
 </div>
