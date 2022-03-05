@@ -1,4 +1,4 @@
-# H1 PHP Task Manager 
+# PHP Task Manager 
 
 The purpose of this project is to practice the integration of PHP and MySQL. 
 A task manager was built to execute 4 basic operations: 
