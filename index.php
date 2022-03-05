@@ -10,7 +10,7 @@
     <div class="col-md-4">
 
         <?php if(isset($_SESSION["message"])){ ?>
-            <div class="alert alert-<?= $_SESSION["message_type"];?> success alert-dismissible fade show" role="alert">
+            <div class="alert alert-<?= $_SESSION["message_type"];?> alert-dismissible fade show" role="alert">
             <?= $_SESSION["message"] ?>
           </div>
         <?php } session_unset()?>
@@ -56,7 +56,7 @@
                         <td><?php echo $row["created_at"] ?> </td>
                         <td>
                             <a href="edit.php?id=<?php echo $row['id'] ?>"class="btn btn-secondary" >
-                                <i class="fas fa-marker" src="edit.php"></i>
+                                <i class="fas fa-marker"></i>
                 </a> 
                 <a href="delete_task.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
                     <i class="fas fa-trash-alt" src="delete_task.php"></i>
