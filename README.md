@@ -7,4 +7,4 @@ A task manager was built to execute 4 basic operations:
 3. UPDATE 
 4. DELETE
 
-Any feedback to improve this litle software will be fully appreciated. 
+Any feedback to improve this little software will be fully appreciated. 
